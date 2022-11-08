@@ -2,6 +2,7 @@ import classNames from 'classnames/bind';
 import styles from './modelMovie.module.scss';
 import { getMovieDetail } from '../store/actions';
 import { useDispatch } from 'react-redux';
+import {BsYoutube} from 'react-icons/bs'
 
 const cx= classNames.bind(styles)
 
@@ -27,6 +28,10 @@ function ModelMovie(props) {
                       <p className={cx('modelDate')}>Release date: {movie.release_date || movie.first_air_date}</p>
                       <p className={cx('modelRuntime')}>Runtime: m</p>
                       <p  className={cx('modelDescription')}>{movie.overview}</p>
+                </div>
+                <div className={cx('movie-watch')}>
+                       <BsYoutube className={cx('movie-watch-bs')} onClick={()=>{alert("This is demo, i dont have API for MOVIE !")}}/>
+                       <h3>Watch Movie</h3>
                 </div>
             </div>
        </div>  

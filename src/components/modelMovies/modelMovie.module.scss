@@ -35,7 +35,41 @@
     width: 70%;
     height: 100%;
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.94) 60%, transparent);
+    .movie-watch{
+        position: absolute;
+        top:40%;
+        right: -23%;
+        color:red;
+        font-size: 50px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
 
+        h3{
+            color:rgb(123, 255, 0);
+            @media screen and (max-width:1184px) {
+                font-size: 16px;
+            }
+            @media screen and (max-width:600px) {
+               display: none;
+            }
+        }
+    }
+
+
+    .movie-watch-bs{
+        font-size: 118px;
+
+        &:hover{
+            font-size: 110px;
+            color:rgb(241, 50, 50)
+        }
+        &:active{
+            font-size: 120px;
+            color:rgb(255, 115, 0);
+        }
+    }
     .modelInfor{
         width: 65%;
         height: 100%;

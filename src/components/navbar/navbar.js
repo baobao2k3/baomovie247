@@ -21,14 +21,17 @@ function Navbar({props}) {
         setKeywords(keyword)
      }
      const goHome=()=>{
-        nav('/')
+        nav('/home')
         setKeywords('')
    }
   useEffect(()=>{
-        (keywords.length>0)
-        ?  nav(`/search?keywords=${keywords.trim()}`)
-        : nav('/')
-
+       if(checkURL){
+         nav('/')
+       }else{
+         (keywords.length>0)
+         ?  nav(`/search?keywords=${keywords.trim()}`)
+         : nav('/home')
+       }
   },[keywords])
 
    return(
