@@ -3,10 +3,19 @@ import styles from './modelMovie.module.scss';
 import { getMovieDetail } from '../store/actions';
 import { useDispatch } from 'react-redux';
 import {BsYoutube} from 'react-icons/bs'
+import { useNavigate } from 'react-router-dom';
 
 const cx= classNames.bind(styles)
 
 function ModelMovie(props) {
+      const history=useNavigate()
+
+      const handelMovie=()=>{
+            alert("I dont have API for movie video. THIS IS DEMO!! :))")
+            setTimeout(()=>{
+                  history('/movieMM')
+                 },1000)
+      }
       const {movie, showModel}=props
       const dispatch = useDispatch()
       const handelCloseModal=()=>{
@@ -30,7 +39,7 @@ function ModelMovie(props) {
                       <p  className={cx('modelDescription')}>{movie.overview}</p>
                 </div>
                 <div className={cx('movie-watch')}>
-                       <BsYoutube className={cx('movie-watch-bs')} onClick={()=>{alert("This is demo, i dont have API for MOVIE !")}}/>
+                       <BsYoutube className={cx('movie-watch-bs')} onClick={handelMovie}/>
                        <h3>Watch Movie</h3>
                 </div>
             </div>

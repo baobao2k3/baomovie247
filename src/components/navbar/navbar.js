@@ -11,7 +11,7 @@ const cx = classNames.bind(styles);
 
 function Navbar({props}) {
    const Test=useLocation();
-   const checkURL=(Test.pathname==='/');
+   const checkURL=(Test.pathname==='/' || Test.pathname==='/movieMM');
    const[scrollY]=UseScrollY()
    const [keywords, setKeywords]=useState('')
    const nav=useNavigate()
