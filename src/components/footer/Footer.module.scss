@@ -80,6 +80,7 @@
 
   @media screen and (max-width:800px) {
     padding: 30px;
+    width: 100%;
  }
   }
   .keep-icon,
@@ -115,6 +116,10 @@
     letter-spacing: 1.4px;
     color: #9a9a9a;
     line-height: 21px;
+
+    @media screen and (max-width:800px) {
+      width: 100%;
+   }
   }
   .keep-ti{
     font-size: 20px;
